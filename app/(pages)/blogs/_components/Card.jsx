@@ -7,7 +7,7 @@ function Card({link, heading, subheading }) {
       <div className="flex flex-col gap-10 align-middle items-center justify-center mt-10">
         <div className="flex flex-col pt-2 border-2 rounded-xl w-[49rem] h-auto pb-4 items-center text-center justify-left pl-4 text-3xl">
           {heading}
-          <div className="flex text-sm mt-1">{subheading}</div>
+          <div className="flex text-sm mt-1">{subheading.split(" ").splice(0,10).join(" ") }...</div>
         </div>
       </div>
     </Link>

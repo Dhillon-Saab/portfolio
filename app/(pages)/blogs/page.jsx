@@ -14,6 +14,7 @@ async function page() {
   const blogs = await getBlogs();
   return (
     <div>
+      <h2 className="text-center mt-4 text-5xl font-bold">Blogs</h2>
       {blogs.map((blog)=>{
         return(
           <Card key={blog.id} link={`/blogs/${blog.id}`} heading={blog.title} subheading={blog.content} />

@@ -4,7 +4,7 @@ function page() {
   return (
     <div className="flex flex-col ml-20 h-98">
     {/* <div className="flex h-0.5 bg-white mt-1"></div> */}
-    <div className="flex ml-20 align-center text-center font-bold text-5xl mt-4 ">
+    <div className="text-center justify-start items-center align-middle font-bold text-5xl mt-4 ">
       About Me
     </div>
     <p className="flex text-lg ml-96 w-7/12">
