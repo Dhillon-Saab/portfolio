@@ -21,7 +21,7 @@ function Card({ link, heading, subheading, tags }) {
           <div className="flex gap-3 justify-start align-top items-start mr-[28rem]">
             {tags?.map((tag_) => {
               return (
-                <div className="text-sm bg-gray-800 p-2 rounded-full">{tag_}</div>
+                <div key={tag_} className="text-sm bg-gray-800 p-2 rounded-full">{tag_}</div>
               );
             })}
           </div>
