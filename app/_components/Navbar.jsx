@@ -11,17 +11,17 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <div className="fixed w-full">
+    <div className="static w-full bg-black">
       <nav className="text-white p-3">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <a href="/" className="text-xl font-bold">
             <Image
               src="/logo.png"
-              width={180}
-              height={180}
+              width={140}
+              height={140}
               priority
               alt="Portfolio logo"
-              className="w-auto h-auto"
+              className="w-48 h-auto"
             />
           </a>
 
@@ -43,52 +43,110 @@ const Navbar = () => {
               isOpen ? "hidden" : "block"
             } flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 gap-7`}
           >
-            {["/", "/about", "/projects", "/contact"].map((path) => (
+            {["/", "/about", "/projects", "/blogs" , "/contact"].map((path) => (
               <li key={path} className="p-2">
                 <Link href={path}>
                   {path === "/" ? (
                     <div>
-                      <Image
+                      {/* <Image
                         width={200}
                         height={200}
                         src="/home.png"
                         className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                         alt="Home"
-                      />
-                      <div className={pathname === path ? "h-[2px] w-full bg-white mt-2" : ""}></div>
+                      /> */}
+                      <h2 className="mt-2 font-extralight text-2xl ease-in-out duration-300 hover:text-3xl">
+                        Home
+                      </h2>
+                      <div
+                        className={
+                          pathname === path
+                            ? "h-[2px] w-full bg-white mt-2"
+                            : ""
+                        }
+                      ></div>
                     </div>
                   ) : path === "/about" ? (
                     <div>
-                      <Image
+                      {/* <Image
                         width={200}
                         height={200}
                         src="/about.png"
                         className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                         alt="About"
-                      />
-                      <div className={pathname === path ? "h-[2px] w-full bg-white mt-2" : ""}></div>
+                      /> */}
+                      <h2 className="mt-2 font-extralight text-2xl ease-in-out duration-300 hover:text-3xl">
+                        About
+                      </h2>
+                      <div
+                        className={
+                          pathname === path
+                            ? "h-[2px] w-full bg-white mt-2"
+                            : ""
+                        }
+                      ></div>
                     </div>
                   ) : path === "/projects" ? (
                     <div>
-                      <Image
+                      {/* <Image
                         width={200}
                         height={200}
                         src="/project.png"
                         className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                         alt="Projects"
-                      />
-                      <div className={pathname === path ? "h-[2px] w-full bg-white mt-2" : ""}></div>
+                      /> */}
+                      <h2 className="mt-2 font-extralight text-2xl ease-in-out duration-300 hover:text-3xl">
+                        Projects
+                      </h2>
+                      <div
+                        className={
+                          pathname === path
+                            ? "h-[2px] w-full bg-white mt-2"
+                            : ""
+                        }
+                      ></div>
                     </div>
-                  ) : path === "/contact" ? (
-                    <div>
-                      <Image
+                  ) : path === "/blogs"? 
+                  <div>
+                      {/* <Image
                         width={200}
                         height={200}
                         src="/contact.png"
                         className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                         alt="Contact"
-                      />
-                      <div className={pathname === path ? "h-[2px] w-full bg-white mt-2" : ""}></div>
+                      /> */}
+                      <h2 className="mt-2 font-extralight text-2xl ease-in-out duration-300 hover:text-3xl">
+                        Blogs
+                      </h2>
+
+                      <div
+                        className={
+                          pathname === path
+                            ? "h-[2px] w-full bg-white mt-2"
+                            : ""
+                        }
+                      ></div>
+                    </div>
+                  : path === "/contact" ? (
+                    <div>
+                      {/* <Image
+                        width={200}
+                        height={200}
+                        src="/contact.png"
+                        className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
+                        alt="Contact"
+                      /> */}
+                      <h2 className="mt-2 font-extralight text-2xl ease-in-out duration-300 hover:text-3xl">
+                        Contact Me
+                      </h2>
+
+                      <div
+                        className={
+                          pathname === path
+                            ? "h-[2px] w-full bg-white mt-2"
+                            : ""
+                        }
+                      ></div>
                     </div>
                   ) : (
                     path.substring(1).charAt(0).toUpperCase() + path.slice(2)
