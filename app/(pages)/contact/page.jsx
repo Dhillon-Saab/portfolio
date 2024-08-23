@@ -2,7 +2,7 @@
 import { sendMail } from "@/actions/contactMail";
 import React, { useRef, useState } from "react";
 
-function page() {
+function Contact() {
 
   const ref = useRef(null);
   const [res, setRes] = useState();
@@ -64,4 +64,4 @@ function page() {
   );
 }
 
-export default page;
+export default Contact;
