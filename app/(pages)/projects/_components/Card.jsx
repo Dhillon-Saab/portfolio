@@ -19,9 +19,9 @@ function Card({ link, heading, subheading, tags }) {
             {subheading?.split(" ").splice(0, 25).join(" ")}...
           </div>
           <div className="flex gap-3 justify-start align-top items-start mr-[28rem]">
-            {tags?.map((tag) => {
+            {tags?.map((tag_) => {
               return (
-                <div className="text-sm bg-gray-800 p-2 rounded-full">{tag}</div>
+                <div className="text-sm bg-gray-800 p-2 rounded-full">{tag_}</div>
               );
             })}
           </div>
